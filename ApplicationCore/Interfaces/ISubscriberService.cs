@@ -5,7 +5,7 @@ namespace ApplicationCore.Interfaces;
 
 public interface ISubscriberService
 {
-    Task<SubscriberDTO[]> GetAllSubscriber(CancellationToken token);
+    Task<SubscriberDTO[]> GetAllSubscribers(CancellationToken token);
 
-    Task<SubscriberDTO> GetSubscriber(CancellationToken token, int id);
+    Task<SubscriberDTO> GetSubscriber(int id, CancellationToken token);
 }

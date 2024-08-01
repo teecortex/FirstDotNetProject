@@ -2,16 +2,24 @@
 using System.Text.Json.Nodes;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Entities;
+using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure;
 
-public class ApplicationContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public DbSet<Subscriber> subscribers { get; set; }
-    public DbSet<Tariff> tariffs { get; set; }
-    public DbSet<Service> services { get; set; }
+    public DbSet<Subscriber> Subscribers { get; set; }
+    public DbSet<Tariff> Tariffs { get; set; }
+    public DbSet<Service> Services { get; set; }
 
-    public ApplicationContext()
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Service>().ToTable("services");
+        modelBuilder.Entity<Tariff>().ToTable("tariffs");
+        modelBuilder.Entity<Subscriber>().ToTable("subscribers");
+    }
+
+    public ApplicationDbContext()
     {
         Database.EnsureCreated();
     }
@@ -22,10 +30,10 @@ public class ApplicationContext : DbContext
         var jsonDoc = JsonDocument.Parse(data);
         var db = jsonDoc.RootElement.GetProperty("Database");
         var db_dict = JsonSerializer.Deserialize<Dictionary<string, string>>(db);
-
+    
         string conn = "Host=" + db_dict["Host"] + ";Port=" + db_dict["Port"] + ";Database=" + db_dict["Name"] +
                       ";Username=" + db_dict["Username"];
-
+    
         return conn;
     }
 

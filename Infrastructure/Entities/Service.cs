@@ -11,11 +11,11 @@ public class Service
     [Column("description")]
     public string? Description { get; set; }
     [Column("expiration_date")]
-    public DateTime Expiration_date { get; set; }
+    public DateTime ExpirationDate { get; set; }
     [Column("price")] 
     public int Price { get; set; }
     [Column("date_of_creation")]
-    public DateTime? Date_of_creation { get; set; }
+    public DateTime? DateOfCreation { get; set; }
     [Column("date_of_update")]
-    public DateTime? Date_of_update { get; set; }
+    public DateTime? DateOfUpdate { get; set; }
 }

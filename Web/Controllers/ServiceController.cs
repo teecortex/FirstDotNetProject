@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers;
 
+[Route("api/services")]
 public class ServiceController : Controller
 {
     private readonly IServiceService _service;
@@ -13,21 +14,20 @@ public class ServiceController : Controller
         _service = service;
     }
 
-    [HttpGet, Route("api/services")]
+    [HttpGet]
     public async Task<ServiceDTO[]> GetAllServices(CancellationToken token)
     {
         return await _service.GetAllServices(token);
     }
 
-    [HttpGet, Route("api/services/{id}")]
-    public async Task<IActionResult> GetService(CancellationToken token, int id)
+    [HttpGet, Route("{id}")]
+    public async Task<IActionResult> GetService(int id, CancellationToken token)
     {
-        var service = await _service.GetService(token, id);
+        var service = await _service.GetService(id, token);
         if (service != null)
         {
-            return new ObjectResult(service);
+            return Ok(service);
         }
-
-        return new NotFoundResult();
+        return NotFound();
     }
 }

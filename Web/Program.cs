@@ -2,6 +2,20 @@ using ApplicationCore.Interfaces;
 using ApplicationCore.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure;
+using Web;
+
+
+// await CreateHostBuilder(args)
+//     .Build()
+//     .RunAsync();
+//
+// // do not forget to copy the rest of the setup if any
+// static IHostBuilder CreateHostBuilder(string[] args) =>
+//     Host.CreateDefaultBuilder(args)
+//         .ConfigureWebHostDefaults(webBuilder =>
+//         {
+//             webBuilder.UseStartup<Startup>();
+//         });
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ISubscriberService, SubscriberService>();
@@ -15,8 +29,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string data = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json"));
-Console.WriteLine(data);
+// string data = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json"));
+// Console.WriteLine(data);
 
 
 var app = builder.Build();

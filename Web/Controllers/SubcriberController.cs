@@ -5,6 +5,7 @@ using ApplicationCore.Interfaces;
 
 namespace Web.Controllers;
 
+[Route("api/subscribers")]
 public class SubscriberController : Controller
 {
     private readonly ISubscriberService _service;
@@ -14,21 +15,21 @@ public class SubscriberController : Controller
         _service = service;
     }
     
-    [HttpGet, Route("api/subscribers")]
+    [HttpGet]
     public Task<SubscriberDTO[]> GetAllSubscribers(CancellationToken token)
     {
-        return _service.GetAllSubscriber(token);
+        return _service.GetAllSubscribers(token);
     }
 
-    [HttpGet, Route("api/subscribers/{id}")]
-    public async Task<IActionResult> GetSubscriber(CancellationToken token, int id)
+    [HttpGet, Route("{id}")]
+    public async Task<IActionResult> GetSubscribers(int id, CancellationToken token)
     {
-        var sub = await _service.GetSubscriber(token, id);
+        var sub = await _service.GetSubscriber(id, token);
         if (sub != null)
         {
-            return new ObjectResult(sub);
+            return Ok(sub);
         }
 
-        return new NotFoundResult();
+        return NotFound();
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers;
 
+[Route("api/tariffs")]
 public class TariffController : Controller
 {
     private readonly ITariffService _service;
@@ -13,21 +14,21 @@ public class TariffController : Controller
         _service = service;
     }
 
-    [HttpGet, Route("api/tariffs")]
+    [HttpGet]
     public Task<TariffDTO[]> GetAllTariffs(CancellationToken token)
     {
-        return _service.GetAllTariff(token);
+        return _service.GetAllTariffs(token);
     }
 
-    [HttpGet, Route("api/tariffs/{id}")]
-    public async Task<IActionResult> GetTariff(CancellationToken token, int id)
+    [HttpGet, Route("{id}")]
+    public async Task<IActionResult> GetTariff(int id, CancellationToken token)
     {
-        var tariff = await _service.GetTariff(token, id);
+        var tariff = await _service.GetTariff(id, token);
         if (tariff != null)
         {
-            return new ObjectResult(tariff);
+            return Ok(tariff);
         }
 
-        return new NotFoundResult();
+        return NotFound();
     }
 }

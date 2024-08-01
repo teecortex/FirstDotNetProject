@@ -11,17 +11,17 @@ public class Tariff
     [Column("description")]
     public string? Description { get; set; }
     [Column("type_of_fee_debit")]
-    public string Type_of_fee_debit { get; set; }
+    public string TypeOfFeeDebit { get; set; }
     [Column("subscription_fee")]
-    public int Subscription_fee { get; set; }
+    public int SubscriptionFee { get; set; }
     [Column("minutes_limit")]
-    public int Minutes_limit { get; set; }
+    public int MinutesLimit { get; set; }
     [Column("internet_traffic_limit")]
-    public int Internet_traffic_limit { get; set; }
+    public int InternetTrafficLimit { get; set; }
     [Column("price")]
     public int Price { get; set; }
     [Column("date_of_creation")]
-    public DateTime? Date_of_creation { get; set; }
+    public DateTime? DateOfCreation { get; set; }
     [Column("date_of_update")]
-    public DateTime? Date_of_update { get; set; }
+    public DateTime? DateOfUpdate { get; set; }
 }

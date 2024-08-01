@@ -7,7 +7,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddDataContext(this IServiceCollection services)
     {
-        services.AddDbContext<ApplicationContext>();
+        services.AddDbContext<ApplicationDbContext>();
         return services;
     }
 }

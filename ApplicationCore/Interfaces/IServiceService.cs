@@ -5,5 +5,5 @@ namespace ApplicationCore.Interfaces;
 public interface IServiceService
 {
     Task<ServiceDTO[]> GetAllServices(CancellationToken token);
-    Task<ServiceDTO> GetService(CancellationToken token, int id);
+    Task<ServiceDTO> GetService(int id, CancellationToken token);
 }
