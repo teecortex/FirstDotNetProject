@@ -4,22 +4,11 @@ namespace ApplicationCore.Models;
 
 public record ServiceDTO
 {
-    public int Id { get; init; }
-    public string Title { get; init; }
-    public string? Description { get; init; }
-    public DateTime ExpirationDate { get; init; }
-    public int Price { get; init; }
-    public DateTime? DateOfCreation { get; init; }
-    public DateTime? DateOfUpdate { get; init; }
-
-    public ServiceDTO(Service service)
-    {
-        Id = service.Id;
-        Title = service.Title;
-        Description = service.Description;
-        ExpirationDate = service.ExpirationDate;
-        Price = service.Price;
-        DateOfCreation = service.DateOfCreation;
-        DateOfUpdate = service.DateOfUpdate;
-    }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string? Description { get; set; }
+    public DateTime ExpirationDate { get; set; }
+    public int Price { get; set; }
+    public DateTime? DateOfCreation { get; set; }
+    public DateTime? DateOfUpdate { get; set; }
 }

@@ -1,4 +1,5 @@
 using ApplicationCore.Interfaces;
+using ApplicationCore.Mappers;
 using ApplicationCore.Models;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ public class ServiceService : IServiceService
     public async Task<ServiceDTO[]> GetAllServices(CancellationToken token)
     {
         var services = await _context.Services.ToArrayAsync(token);
-        return services.Select(x => new ServiceDTO(x)).ToArray();
+        return services.Select(x => ServiceMapper.Mapper(x, new ServiceDTO())).ToArray();
         
     }
 
@@ -28,7 +29,7 @@ public class ServiceService : IServiceService
 
         if (service != null)
         {
-            return new ServiceDTO(service);
+            return ServiceMapper.Mapper(service, new ServiceDTO());
         }
         
         return null;

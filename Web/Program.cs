@@ -4,33 +4,20 @@ using Microsoft.Extensions.DependencyInjection;
 using Infrastructure;
 using Web;
 
-
-// await CreateHostBuilder(args)
-//     .Build()
-//     .RunAsync();
-//
-// // do not forget to copy the rest of the setup if any
-// static IHostBuilder CreateHostBuilder(string[] args) =>
-//     Host.CreateDefaultBuilder(args)
-//         .ConfigureWebHostDefaults(webBuilder =>
-//         {
-//             webBuilder.UseStartup<Startup>();
-//         });
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ISubscriberService, SubscriberService>();
 builder.Services.AddScoped<ITariffService, TariffService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
 
-builder.Services.AddDataContext();
+// Add secrets to Program.cs
+builder.Configuration.AddUserSecrets<Program>();
+
+builder.Services.AddDataContext(builder.Configuration["ConnectionString"]);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// string data = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "appsettings.json"));
-// Console.WriteLine(data);
 
 
 var app = builder.Build();

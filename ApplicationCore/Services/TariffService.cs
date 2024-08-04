@@ -1,4 +1,5 @@
 using ApplicationCore.Interfaces;
+using ApplicationCore.Mappers;
 using ApplicationCore.Models;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ public class TariffService : ITariffService
     {
         var tariffs = await _context.Tariffs.ToArrayAsync(token);
 
-        return tariffs.Select(x=> new TariffDTO(x)).ToArray();
+        return tariffs.Select(x=> TariffMapper.Mapper(x, new TariffDTO())).ToArray();
     }
 
     public async Task<TariffDTO> GetTariff(int id, CancellationToken token)
@@ -28,7 +29,7 @@ public class TariffService : ITariffService
         
         if (tariff != null)
         {
-            return new TariffDTO(tariff);
+            return TariffMapper.Mapper(tariff, new TariffDTO());
         }
 
         return null;
