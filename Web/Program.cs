@@ -1,23 +1,28 @@
 using ApplicationCore.Interfaces;
 using ApplicationCore.Services;
-using Microsoft.Extensions.DependencyInjection;
 using Infrastructure;
 using Web;
+using Web.GrpcServices;
+using ServiceService = Web.ServiceService;
+using TariffService = Web.TariffService;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<ISubscriberService, SubscriberService>();
-builder.Services.AddScoped<ITariffService, TariffService>();
-builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<ISubscriberService, ApplicationCore.Services.SubscriberService>();
+builder.Services.AddScoped<ITariffService, ApplicationCore.Services.TariffService>();
+builder.Services.AddScoped<IServiceService, ApplicationCore.Services.ServiceService>();
 
 // Add secrets to Program.cs
 builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddDataContext(builder.Configuration["ConnectionString"]);
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddGrpc();
 
 
 var app = builder.Build();
@@ -32,6 +37,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// Добавляем gRPC сервис
+
+app.MapGrpcService<SubscriberApiService>();
+app.MapGrpcService<TariffApiService>();
+app.MapGrpcService<ServiceApiService>();
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

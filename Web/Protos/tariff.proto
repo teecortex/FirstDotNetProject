@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "Web";
+
+package tariff;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service TariffService{
+  rpc ListTariffs(google.protobuf.Empty) returns (TariffListReply);
+  rpc GetTariff(GetTariffRequest) returns (TariffReply);
+}
+
+message GetTariffRequest{
+  int32 id = 1;
+}
+
+message TariffReply{
+  int32 id = 1;
+  string title = 2;
+  google.protobuf.StringValue description = 3;
+  string type_of_fee_debit = 4;
+  int32 subscription_fee = 5;
+  int32 minutes_limit = 6;
+  int32 internet_traffic_limit = 7;
+  int32 price = 8;
+  google.protobuf.StringValue date_of_creation = 9;
+  google.protobuf.StringValue date_of_update = 10;
+}
+
+message TariffListReply{
+  repeated TariffReply Tariffs = 1;
+}

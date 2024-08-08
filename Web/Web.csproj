@@ -7,7 +7,25 @@
       <UserSecretsId>ed66d963-f0d7-4eaa-88c7-60380d0ae7d2</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Protobuf Include="Protos\subscriber.proto" GrpcServices="Server" OutputDir="GrpcServices"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\tariff.proto" GrpcServices="Server" OutputDir="GrpcServices"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\service.proto" GrpcServices="Server" OutputDir="GrpcServices"/>
+  </ItemGroup>
+
     <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.27.3" />
+      <PackageReference Include="Grpc.AspNetCore" Version="2.62.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.62.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     </ItemGroup>
 

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "Web";
+
+package service;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+service ServiceService{
+  rpc ListServices(google.protobuf.Empty) returns (ServiceListReply);
+  rpc GetService(GetServiceRequest) returns (ServiceReply);
+}
+
+message GetServiceRequest{
+  int32 id = 1;
+}
+
+message ServiceReply{
+  int32 id = 1;
+  string title = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.Timestamp expiration_date = 4;
+  int32 price = 5;
+  google.protobuf.StringValue date_of_creation = 6;
+  google.protobuf.StringValue date_of_update = 7;
+}
+
+message ServiceListReply{
+  repeated ServiceReply Services = 1;
+}
