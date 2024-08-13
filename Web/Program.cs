@@ -23,6 +23,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddGrpc();
+builder.Services.AddGraphQLServer()
+    .AddQueryType<QueryProvider>()
+    .AddProjections()
+    .AddFiltering()
+    .AddSorting();
 
 
 var app = builder.Build();
@@ -60,5 +65,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
+
+app.MapGraphQL("/graphql");
 
 app.Run();
