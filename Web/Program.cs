@@ -15,6 +15,11 @@ builder.Services.AddScoped<IServiceService, ApplicationCore.Services.ServiceServ
 builder.Configuration.AddUserSecrets<Program>();
 
 builder.Services.AddDataContext(builder.Configuration["ConnectionString"]);
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+    options.InstanceName = "rediska";
+});
 
 
 // Add services to the container.
