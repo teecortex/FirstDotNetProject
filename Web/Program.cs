@@ -1,10 +1,8 @@
 using ApplicationCore.Interfaces;
-using ApplicationCore.Services;
 using Infrastructure;
 using Web;
 using Web.GrpcServices;
-using ServiceService = Web.ServiceService;
-using TariffService = Web.TariffService;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ISubscriberService, ApplicationCore.Services.SubscriberService>();

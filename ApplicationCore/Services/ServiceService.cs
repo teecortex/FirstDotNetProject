@@ -6,6 +6,7 @@ using Infrastructure;
 using Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Logging;
 
 namespace ApplicationCore.Services;
 
@@ -13,11 +14,13 @@ public class ServiceService : IServiceService
 {
     private readonly ApplicationDbContext _context;
     private readonly IDistributedCache _cache;
+    private readonly ILogger<ServiceService> _logger;
 
-    public ServiceService(ApplicationDbContext context, IDistributedCache distributedCache)
+    public ServiceService(ApplicationDbContext context, IDistributedCache distributedCache, ILogger<ServiceService> logger)
     {
         _context = context;
         _cache = distributedCache;
+        _logger = logger;
     }
 
 
@@ -29,13 +32,17 @@ public class ServiceService : IServiceService
 
         if (servicesString != null)
         {
+            _logger.LogInformation("Getting all services from redis cache");
             services = JsonSerializer.Deserialize<Service[]>(servicesString);
         }
         else
         {
+            _logger.LogInformation("Getting all services from db");
             services = await _context.Services.ToArrayAsync(token);
 
             servicesString = JsonSerializer.Serialize(services);
+            
+            _logger.LogInformation("Set key with services in redis");
             _cache.SetStringAsync("Services", servicesString, new DistributedCacheEntryOptions
             {
                 AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(3)
@@ -55,11 +62,13 @@ public class ServiceService : IServiceService
 
         if (servicesString != null)
         {
+            _logger.LogInformation($"Getting service with id={id} from redis cache");
             services = JsonSerializer.Deserialize<Service[]>(servicesString);
             service = services.FirstOrDefault(x => x.Id == id);
         }
         else
         {
+            _logger.LogInformation($"Getting service with id={id} from db");
             service = await _context.Services.FirstOrDefaultAsync(x => x.Id == id, token);
         }
         

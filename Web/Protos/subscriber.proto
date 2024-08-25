@@ -6,7 +6,6 @@ package sub;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
-import "google/protobuf/timestamp.proto";
 
 
 service SubscriberService{
@@ -24,7 +23,7 @@ message SubscriberReply{
   string first_name = 2;
   string last_name = 3;
   google.protobuf.StringValue patronymic = 4;
-  google.protobuf.Timestamp date_of_birth = 5;
+  google.protobuf.StringValue date_of_birth = 5;
   string phone_number = 6;
   string email = 7;
   int32 rating = 8;

@@ -26,24 +26,23 @@ namespace Web {
           string.Concat(
             "ChdQcm90b3Mvc3Vic2NyaWJlci5wcm90bxIDc3ViGhtnb29nbGUvcHJvdG9i",
             "dWYvZW1wdHkucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIiChRHZXRTdWJz",
-            "Y3JpYmVyUmVxdWVzdBIKCgJpZBgBIAEoBSL8AgoPU3Vic2NyaWJlclJlcGx5",
-            "EgoKAmlkGAEgASgFEhIKCmZpcnN0X25hbWUYAiABKAkSEQoJbGFzdF9uYW1l",
-            "GAMgASgJEjAKCnBhdHJvbnltaWMYBCABKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "U3RyaW5nVmFsdWUSMQoNZGF0ZV9vZl9iaXJ0aBgFIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASFAoMcGhvbmVfbnVtYmVyGAYgASgJEg0KBWVt",
-            "YWlsGAcgASgJEg4KBnJhdGluZxgIIAEoBRIuCgl0YXJpZmZfaWQYCSABKAsy",
-            "Gy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRI2ChBkYXRlX29mX2NyZWF0",
-            "aW9uGAogASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjQKDmRh",
-            "dGVfb2ZfdXBkYXRlGAsgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
-            "bHVlIkAKE1N1YnNjcmliZXJMaXN0UmVwbHkSKQoLU3Vic2NyaWJlcnMYASAD",
-            "KAsyFC5zdWIuU3Vic2NyaWJlclJlcGx5MpoBChFTdWJzY3JpYmVyU2Vydmlj",
-            "ZRJDCg9MaXN0U3Vic2NyaWJlcnMSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
-            "GC5zdWIuU3Vic2NyaWJlckxpc3RSZXBseRJACg1HZXRTdWJzY3JpYmVyEhku",
-            "c3ViLkdldFN1YnNjcmliZXJSZXF1ZXN0GhQuc3ViLlN1YnNjcmliZXJSZXBs",
-            "eUIGqgIDV2ViYgZwcm90bzM="));
+            "byIiChRHZXRTdWJzY3JpYmVyUmVxdWVzdBIKCgJpZBgBIAEoBSL+AgoPU3Vi",
+            "c2NyaWJlclJlcGx5EgoKAmlkGAEgASgFEhIKCmZpcnN0X25hbWUYAiABKAkS",
+            "EQoJbGFzdF9uYW1lGAMgASgJEjAKCnBhdHJvbnltaWMYBCABKAsyHC5nb29n",
+            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSMwoNZGF0ZV9vZl9iaXJ0aBgFIAEo",
+            "CzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIUCgxwaG9uZV9udW1i",
+            "ZXIYBiABKAkSDQoFZW1haWwYByABKAkSDgoGcmF0aW5nGAggASgFEi4KCXRh",
+            "cmlmZl9pZBgJIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEjYK",
+            "EGRhdGVfb2ZfY3JlYXRpb24YCiABKAsyHC5nb29nbGUucHJvdG9idWYuU3Ry",
+            "aW5nVmFsdWUSNAoOZGF0ZV9vZl91cGRhdGUYCyABKAsyHC5nb29nbGUucHJv",
+            "dG9idWYuU3RyaW5nVmFsdWUiQAoTU3Vic2NyaWJlckxpc3RSZXBseRIpCgtT",
+            "dWJzY3JpYmVycxgBIAMoCzIULnN1Yi5TdWJzY3JpYmVyUmVwbHkymgEKEVN1",
+            "YnNjcmliZXJTZXJ2aWNlEkMKD0xpc3RTdWJzY3JpYmVycxIWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRoYLnN1Yi5TdWJzY3JpYmVyTGlzdFJlcGx5EkAKDUdl",
+            "dFN1YnNjcmliZXISGS5zdWIuR2V0U3Vic2NyaWJlclJlcXVlc3QaFC5zdWIu",
+            "U3Vic2NyaWJlclJlcGx5QgaqAgNXZWJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Web.GetSubscriberRequest), global::Web.GetSubscriberRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Web.SubscriberReply), global::Web.SubscriberReply.Parser, new[]{ "Id", "FirstName", "LastName", "Patronymic", "DateOfBirth", "PhoneNumber", "Email", "Rating", "TariffId", "DateOfCreation", "DateOfUpdate" }, null, null, null, null),
@@ -283,7 +282,7 @@ namespace Web {
       firstName_ = other.firstName_;
       lastName_ = other.lastName_;
       Patronymic = other.Patronymic;
-      dateOfBirth_ = other.dateOfBirth_ != null ? other.dateOfBirth_.Clone() : null;
+      DateOfBirth = other.DateOfBirth;
       phoneNumber_ = other.phoneNumber_;
       email_ = other.email_;
       rating_ = other.rating_;
@@ -351,15 +350,17 @@ namespace Web {
 
     /// <summary>Field number for the "date_of_birth" field.</summary>
     public const int DateOfBirthFieldNumber = 5;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp dateOfBirth_;
+    private static readonly pb::FieldCodec<string> _single_dateOfBirth_codec = pb::FieldCodec.ForClassWrapper<string>(42);
+    private string dateOfBirth_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp DateOfBirth {
+    public string DateOfBirth {
       get { return dateOfBirth_; }
       set {
         dateOfBirth_ = value;
       }
     }
+
 
     /// <summary>Field number for the "phone_number" field.</summary>
     public const int PhoneNumberFieldNumber = 6;
@@ -458,7 +459,7 @@ namespace Web {
       if (FirstName != other.FirstName) return false;
       if (LastName != other.LastName) return false;
       if (Patronymic != other.Patronymic) return false;
-      if (!object.Equals(DateOfBirth, other.DateOfBirth)) return false;
+      if (DateOfBirth != other.DateOfBirth) return false;
       if (PhoneNumber != other.PhoneNumber) return false;
       if (Email != other.Email) return false;
       if (Rating != other.Rating) return false;
@@ -517,8 +518,7 @@ namespace Web {
         _single_patronymic_codec.WriteTagAndValue(output, Patronymic);
       }
       if (dateOfBirth_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(DateOfBirth);
+        _single_dateOfBirth_codec.WriteTagAndValue(output, DateOfBirth);
       }
       if (PhoneNumber.Length != 0) {
         output.WriteRawTag(50);
@@ -567,8 +567,7 @@ namespace Web {
         _single_patronymic_codec.WriteTagAndValue(ref output, Patronymic);
       }
       if (dateOfBirth_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(DateOfBirth);
+        _single_dateOfBirth_codec.WriteTagAndValue(ref output, DateOfBirth);
       }
       if (PhoneNumber.Length != 0) {
         output.WriteRawTag(50);
@@ -614,7 +613,7 @@ namespace Web {
         size += _single_patronymic_codec.CalculateSizeWithTag(Patronymic);
       }
       if (dateOfBirth_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DateOfBirth);
+        size += _single_dateOfBirth_codec.CalculateSizeWithTag(DateOfBirth);
       }
       if (PhoneNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
@@ -661,10 +660,9 @@ namespace Web {
         }
       }
       if (other.dateOfBirth_ != null) {
-        if (dateOfBirth_ == null) {
-          DateOfBirth = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        if (dateOfBirth_ == null || other.DateOfBirth != "") {
+          DateOfBirth = other.DateOfBirth;
         }
-        DateOfBirth.MergeFrom(other.DateOfBirth);
       }
       if (other.PhoneNumber.Length != 0) {
         PhoneNumber = other.PhoneNumber;
@@ -725,10 +723,10 @@ namespace Web {
             break;
           }
           case 42: {
-            if (dateOfBirth_ == null) {
-              DateOfBirth = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            string value = _single_dateOfBirth_codec.Read(input);
+            if (dateOfBirth_ == null || value != "") {
+              DateOfBirth = value;
             }
-            input.ReadMessage(DateOfBirth);
             break;
           }
           case 50: {
@@ -799,10 +797,10 @@ namespace Web {
             break;
           }
           case 42: {
-            if (dateOfBirth_ == null) {
-              DateOfBirth = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            string value = _single_dateOfBirth_codec.Read(ref input);
+            if (dateOfBirth_ == null || value != "") {
+              DateOfBirth = value;
             }
-            input.ReadMessage(DateOfBirth);
             break;
           }
           case 50: {

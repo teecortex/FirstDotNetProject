@@ -25,22 +25,21 @@ namespace Web {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRQcm90b3Mvc2VydmljZS5wcm90bxIHc2VydmljZRoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL3dyYXBwZXJzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8iHwoRR2V0U2Vy",
-            "dmljZVJlcXVlc3QSCgoCaWQYASABKAUijgIKDFNlcnZpY2VSZXBseRIKCgJp",
-            "ZBgBIAEoBRINCgV0aXRsZRgCIAEoCRIxCgtkZXNjcmlwdGlvbhgDIAEoCzIc",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIzCg9leHBpcmF0aW9uX2Rh",
-            "dGUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg0KBXByaWNl",
-            "GAUgASgFEjYKEGRhdGVfb2ZfY3JlYXRpb24YBiABKAsyHC5nb29nbGUucHJv",
-            "dG9idWYuU3RyaW5nVmFsdWUSNAoOZGF0ZV9vZl91cGRhdGUYByABKAsyHC5n",
-            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUiOwoQU2VydmljZUxpc3RSZXBs",
-            "eRInCghTZXJ2aWNlcxgBIAMoCzIVLnNlcnZpY2UuU2VydmljZVJlcGx5MpQB",
-            "Cg5TZXJ2aWNlU2VydmljZRJBCgxMaXN0U2VydmljZXMSFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkaGS5zZXJ2aWNlLlNlcnZpY2VMaXN0UmVwbHkSPwoKR2V0",
-            "U2VydmljZRIaLnNlcnZpY2UuR2V0U2VydmljZVJlcXVlc3QaFS5zZXJ2aWNl",
-            "LlNlcnZpY2VSZXBseUIGqgIDV2ViYgZwcm90bzM="));
+            "YnVmL3dyYXBwZXJzLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
+            "dG8iHwoRR2V0U2VydmljZVJlcXVlc3QSCgoCaWQYASABKAUikAIKDFNlcnZp",
+            "Y2VSZXBseRIKCgJpZBgBIAEoBRINCgV0aXRsZRgCIAEoCRIxCgtkZXNjcmlw",
+            "dGlvbhgDIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI1Cg9l",
+            "eHBpcmF0aW9uX2RhdGUYBCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
+            "VmFsdWUSDQoFcHJpY2UYBSABKAUSNgoQZGF0ZV9vZl9jcmVhdGlvbhgGIAEo",
+            "CzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI0Cg5kYXRlX29mX3Vw",
+            "ZGF0ZRgHIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZSI7ChBT",
+            "ZXJ2aWNlTGlzdFJlcGx5EicKCFNlcnZpY2VzGAEgAygLMhUuc2VydmljZS5T",
+            "ZXJ2aWNlUmVwbHkylAEKDlNlcnZpY2VTZXJ2aWNlEkEKDExpc3RTZXJ2aWNl",
+            "cxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoZLnNlcnZpY2UuU2VydmljZUxp",
+            "c3RSZXBseRI/CgpHZXRTZXJ2aWNlEhouc2VydmljZS5HZXRTZXJ2aWNlUmVx",
+            "dWVzdBoVLnNlcnZpY2UuU2VydmljZVJlcGx5QgaqAgNXZWJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Web.GetServiceRequest), global::Web.GetServiceRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Web.ServiceReply), global::Web.ServiceReply.Parser, new[]{ "Id", "Title", "Description", "ExpirationDate", "Price", "DateOfCreation", "DateOfUpdate" }, null, null, null, null),
@@ -279,7 +278,7 @@ namespace Web {
       id_ = other.id_;
       title_ = other.title_;
       Description = other.Description;
-      expirationDate_ = other.expirationDate_ != null ? other.expirationDate_.Clone() : null;
+      ExpirationDate = other.ExpirationDate;
       price_ = other.price_;
       DateOfCreation = other.DateOfCreation;
       DateOfUpdate = other.DateOfUpdate;
@@ -332,15 +331,17 @@ namespace Web {
 
     /// <summary>Field number for the "expiration_date" field.</summary>
     public const int ExpirationDateFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp expirationDate_;
+    private static readonly pb::FieldCodec<string> _single_expirationDate_codec = pb::FieldCodec.ForClassWrapper<string>(34);
+    private string expirationDate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationDate {
+    public string ExpirationDate {
       get { return expirationDate_; }
       set {
         expirationDate_ = value;
       }
     }
+
 
     /// <summary>Field number for the "price" field.</summary>
     public const int PriceFieldNumber = 5;
@@ -400,7 +401,7 @@ namespace Web {
       if (Id != other.Id) return false;
       if (Title != other.Title) return false;
       if (Description != other.Description) return false;
-      if (!object.Equals(ExpirationDate, other.ExpirationDate)) return false;
+      if (ExpirationDate != other.ExpirationDate) return false;
       if (Price != other.Price) return false;
       if (DateOfCreation != other.DateOfCreation) return false;
       if (DateOfUpdate != other.DateOfUpdate) return false;
@@ -448,8 +449,7 @@ namespace Web {
         _single_description_codec.WriteTagAndValue(output, Description);
       }
       if (expirationDate_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ExpirationDate);
+        _single_expirationDate_codec.WriteTagAndValue(output, ExpirationDate);
       }
       if (Price != 0) {
         output.WriteRawTag(40);
@@ -483,8 +483,7 @@ namespace Web {
         _single_description_codec.WriteTagAndValue(ref output, Description);
       }
       if (expirationDate_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ExpirationDate);
+        _single_expirationDate_codec.WriteTagAndValue(ref output, ExpirationDate);
       }
       if (Price != 0) {
         output.WriteRawTag(40);
@@ -516,7 +515,7 @@ namespace Web {
         size += _single_description_codec.CalculateSizeWithTag(Description);
       }
       if (expirationDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpirationDate);
+        size += _single_expirationDate_codec.CalculateSizeWithTag(ExpirationDate);
       }
       if (Price != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Price);
@@ -551,10 +550,9 @@ namespace Web {
         }
       }
       if (other.expirationDate_ != null) {
-        if (expirationDate_ == null) {
-          ExpirationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        if (expirationDate_ == null || other.ExpirationDate != "") {
+          ExpirationDate = other.ExpirationDate;
         }
-        ExpirationDate.MergeFrom(other.ExpirationDate);
       }
       if (other.Price != 0) {
         Price = other.Price;
@@ -600,10 +598,10 @@ namespace Web {
             break;
           }
           case 34: {
-            if (expirationDate_ == null) {
-              ExpirationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            string value = _single_expirationDate_codec.Read(input);
+            if (expirationDate_ == null || value != "") {
+              ExpirationDate = value;
             }
-            input.ReadMessage(ExpirationDate);
             break;
           }
           case 40: {
@@ -655,10 +653,10 @@ namespace Web {
             break;
           }
           case 34: {
-            if (expirationDate_ == null) {
-              ExpirationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            string value = _single_expirationDate_codec.Read(ref input);
+            if (expirationDate_ == null || value != "") {
+              ExpirationDate = value;
             }
-            input.ReadMessage(ExpirationDate);
             break;
           }
           case 40: {
